@@ -3,7 +3,7 @@ import Contact from '../pages/contact';
 import Store from '../pages/store';
 import About from '../pages/about';
 
-export const unprotectedRoutes = [
+export const ERoutes = [
   {
     path: '/',
     element: <Home />
@@ -21,3 +21,4 @@ export const unprotectedRoutes = [
         element: <About />
     }
 ];
+

@@ -5,11 +5,12 @@ import Theme from './theme.jsx';
 
 export default function PrimarySearchAppBar({ children }) {
   return (
-    <AppBar position="static" sx={{ height: '100%vh', background: Theme.palette.tertiary }}>
+    <AppBar position="static" sx={{ height: '100%', background: Theme.palette.primary }}>
       <Toolbar
         sx={{
           height: '100%vh',
-          color: '#000000',
+          width: '100%vw',
+          color: '#FFFFFF',
           fontSize: '16px',
           fontFamily: 'Poppins, sans-serif'
         }}>

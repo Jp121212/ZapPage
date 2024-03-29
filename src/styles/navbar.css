@@ -1,0 +1,33 @@
+.links{
+    border: 1px solid black;
+    display: flex;
+}
+
+.Cart{
+    font-size: 14px;
+    font-family: 'open sans', sans-serif;
+}
+
+
+.NavBar{
+    width: 100%vw;
+    height: 20vh;
+    border: 1px solid black;
+}
+
+.Language{
+    border: 1px solid black;
+    top: 0;   
+    left: 0;
+}
+
+.body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.cont{
+    border: 1px solid black;
+    height: auto;
+}
+

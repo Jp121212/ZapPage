@@ -1,16 +1,21 @@
 import React from 'react';
 import { Route, Routes } from 'react-router';
 import MainLayout from './layouts/MainLayout';
-import { unprotectedRoutes } from './router/router';
+import {  ERoutes } from './router/router';
+import './styles/body.css';
 
 export default function App() {
   return (
-      <Routes>
-        {unprotectedRoutes.map((route, index) => (
-          <Route path={route.path} element={<MainLayout />} key={index} />
-        ))}
-        <Route element={<MainLayout />}>
+    <Routes>
+       <Route element={<MainLayout />}>
+          {ERoutes.map((route, index) => (
+            <Route
+              path={route.path}
+              element={route.element}
+              key={index}
+            />
+          ))}
         </Route>
-      </Routes>
+    </Routes>
   );
 }
