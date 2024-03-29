@@ -8,6 +8,9 @@
     font-family: 'open sans', sans-serif;
 }
 
+.Zap{
+    font-size: 34px;
+}
 
 .NavBar{
     width: 100%vw;
@@ -19,11 +22,6 @@
     border: 1px solid black;
     top: 0;   
     left: 0;
-}
-
-.body{
-    font-family: 'Poppins', sans-serif;
-    
 }
 
 .cont{

@@ -1,6 +1,11 @@
 /* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 body {
+    font-family: 'Exo', sans-serif;
+    font-optical-sizing: auto;
     margin: auto;
-    background-color: #fffcf4; /* Cambia este color al que desees */
+    font-weight: '100';
+    background-color: #fffcf4;
   }
   
