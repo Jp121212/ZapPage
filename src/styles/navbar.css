@@ -1,5 +1,4 @@
 .links{
-    border: 1px solid black;
     display: flex;
 }
 
@@ -10,22 +9,22 @@
 
 .Zap{
     font-size: 34px;
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+    cursor: pointer; 
 }
 
 .NavBar{
     width: 100%vw;
     height: 20vh;
-    border: 1px solid black;
 }
 
 .Language{
-    border: 1px solid black;
     top: 0;   
     left: 0;
 }
 
 .cont{
-    border: 1px solid black;
     height: auto;
 }
 

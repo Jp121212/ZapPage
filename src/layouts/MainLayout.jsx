@@ -22,7 +22,7 @@ export default function MainLayout() {
               }}
             >
               <img src={heart} alt="logo" />
-              <p className="Zap">Zap Energy</p>
+              <a className="Zap" href="/">Zap Energy</a>
             </Box>
             <Box
               sx={{
