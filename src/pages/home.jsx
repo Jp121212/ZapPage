@@ -7,11 +7,7 @@ const home = () => {
       <div className="Category">
         <p>Hola</p>
       </div>
-      <div className="Promos">
-      </div>
       <div className="Restaurants">
-        <div className="GetRestaurant"></div>
-        <div className="SortOptions"></div>
       </div>
     </div>
   </>

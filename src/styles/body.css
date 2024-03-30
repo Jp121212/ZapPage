@@ -9,3 +9,7 @@ body {
     background-color: #fffcf4;
   }
   
+  /* Para navegadores WebKit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  display: none;
+}

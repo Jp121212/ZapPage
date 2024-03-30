@@ -26,18 +26,18 @@ export default function MainLayout() {
             </Box>
             <Box
               sx={{
-                width: "20%",
+                width: "15%",
                 height: "60%",
               }}
             >
               <Links href="/about" underline="hover">
-                {"Sobre Nosotros"}
+                {"About"}
               </Links>
               <Links href="/contact" underline="hover">
-                {"Contacto"}
+                {"Contact"}
               </Links>
               <Buttons
-                text="Comprar"
+                text="Store"
                 color="#000000"
                 colorHover="#fffcf4"
                 colorText="#fffff"
