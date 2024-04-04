@@ -5,6 +5,7 @@ import Buttons from "../Components/Button";
 import { ThemeProvider } from "styled-components";
 import theme from "../Components/theme.jsx";
 import Card from "../Components/Card";
+import Comments from "../Components/Comments.jsx";
 import vitamin from "../icons/vita.png";
 import energy from "../icons/fruit.png";
 import process from "../icons/lab.png";
@@ -26,6 +27,25 @@ const home = () => {
       img: process,
       desc: "From the meticulous selection of ingredients to the careful blending in our state-of-the-art laboratories, each step of the production process is carried out with the utmost care and attention to detail.",
     },
+  ];
+
+  const comments = [
+    {
+      name: "Andrei Rivera",
+      desc: "This energy drink page is my salvation! I always find the best options to keep me focused and full of energy throughout the day. Thank you for offering quality products!",
+      quantity: 5
+    },
+    {
+      name: "Samantha Smith",
+      desc: "I am completely impressed by this energy drink page! Not only do they offer the most popular brands, but they also have amazing prices and exceptional customer service. Definitely my favorite place to shop!",
+      quantity: 4
+    },
+    {
+      name: "Dodanim Castillo",
+      desc: "Incredible variety of energy drinks on this page! From classic flavors to more innovative options, I always find something I love. Definitely my number one destination for stocking up on energy!",
+      quantity: 4
+    }
+    
   ];
   return (
     <>
@@ -72,13 +92,18 @@ const home = () => {
             <div className="OurIngr">
               <div className="OurIngredients">
                 <h2>Our Ingredients</h2>
+               
               </div>
               <Card options={options}></Card>
             </div>
           </div>
-          <div className="WelcomeSec2">
+          <div className="WelcomeSec3">
             <div className="OurIngr">
-              <Card options={options}></Card>
+              <div className="OurIngredients">
+                <h2>Comments</h2> 
+                <a className="Leave" href="/">-- Leave your comment --</a>
+              </div>
+              <Comments comments={comments}></Comments>
             </div>
           </div>
         </div>
