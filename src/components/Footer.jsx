@@ -8,7 +8,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 function Footer() {
   const grid = {
     width: "100%",
-    height: "25vh",
+    height: "100%",
     margin: "auto",
     display: "flex",
     backgroundColor: theme.palette.primary,
@@ -16,7 +16,7 @@ function Footer() {
 
   const div = {
     width: "20%",
-    height: "70%",
+    height: "80%",
     padding: "10px",
     marginLeft: "4%",
     marginTop: "2%",

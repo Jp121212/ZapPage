@@ -4,11 +4,11 @@
 }
 
 .ContactSec{
-    border: 1px solid black;
     margin: auto;
     width: 60%;
     height: 60%;
-    margin-top: 2%;
+    display: flex;
+    margin-top: 4%;
 }
 
 .ContactInfo{
@@ -32,7 +32,10 @@
 }
 
 .ContactButton{
+    margin-bottom: 3%;
 }
 .ContactForm{
+    width: 100%;
+    overflow: scroll;
 
 }
