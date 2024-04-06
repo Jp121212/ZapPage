@@ -11,7 +11,7 @@ function Buttons(props) {
     width: props.width,
     height: props.height,
     fontFamily: 'Exo,sans-serif',
-    borderRadius: '5px',
+    borderRadius: '0px',
     fontSize: props.fontSize,
     lineHeight: 1.5,
     backgroundColor: props.color,

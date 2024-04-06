@@ -101,7 +101,7 @@ const home = () => {
             <div className="OurIngr">
               <div className="OurIngredients">
                 <h2>Comments</h2> 
-                <a className="Leave" href="/">-- Leave your comment --</a>
+                <a className="Leave" href="/"> Leave your comment </a>
               </div>
               <Comments comments={comments}></Comments>
             </div>

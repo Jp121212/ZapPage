@@ -65,7 +65,7 @@ function Ingredients(props) {
                 <p style={p}>{el.name}</p>
                 <p style={desc}>{el.desc}</p>
                 <div style={divImg}>
-                  <img style={img} src={el.img}></img>{" "}
+                  <img style={img} src={el.img}></img>
                 </div>
               </div>
             </Box>

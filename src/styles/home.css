@@ -25,10 +25,21 @@
     margin: auto;
 }
 
+.Local{
+   margin-top: 5%; 
+}
+
+.Socials{
+    margin-left: 10%;
+}
+.email{
+    margin-top: 20%; 
+ }
+
 .TitleInfo{
     width: 100%;
     display: flex;
-    height: 10%;
+    height: 12%;
 }
 
 .TitleInfo img{
@@ -70,6 +81,7 @@
 .Leave{
     font-size: 14px;
     margin-top: 0.3%;
+    font-weight: 600;
     color: rgb(0, 0, 0);
     text-decoration: none; 
     cursor: pointer; 

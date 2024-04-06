@@ -1,0 +1,38 @@
+.ContactPrincipal{
+    width: 100%;
+    height: 100vh;
+}
+
+.ContactSec{
+    border: 1px solid black;
+    margin: auto;
+    width: 60%;
+    height: 60%;
+    margin-top: 2%;
+}
+
+.ContactInfo{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.ContactDesc{
+    font-size: 14px;
+}
+
+.ContactTitle{
+    display: flex;
+}
+
+.ContactTitle img{
+    width: 40px;
+}
+
+.ContactButton{
+}
+.ContactForm{
+
+}
