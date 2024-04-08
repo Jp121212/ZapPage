@@ -4,8 +4,54 @@ import "../styles/contact.css";
 import heart from "../icons/heartgreen.png";
 import Buttons from "../Components/Button.jsx";
 import TextField from "../Components/TextField.jsx";
+import Snackbar from "../Components/Snackbar.jsx";
+import Alert from "../Components/alert.jsx";
+import Form from "../Components/Form.jsx";
+import { useEffect, useState } from "react";
 
-function contact() {
+const Contact = () => {
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [alert, setAlert] = useState("");
+  const [severity, setSeverity] = useState("");
+
+  useEffect(() => {}, [email, message, name, alert, severity]);
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
+  };
+
+  const SendMessage = async (e) => {
+    e.preventDefault();
+    setAlert("");
+    setSeverity("");
+
+    if (!email || !name || !message) {
+      setAlert("Please fill in all fields. ");
+      setSeverity("error");
+      setOpenSnackbar(true)
+      return;
+    } else {
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        setAlert("Message send successfully!");
+        setSeverity("success");
+        setOpenSnackbar(true);
+        setEmail("");
+        setName("");
+        setMessage("");
+      } catch (error) {
+        setAlert(
+          "An error occurred while send message. Please try again later."
+        );
+        setSeverity("error");
+        setOpenSnackbar(true);
+      }
+    }
+  };
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -35,19 +81,65 @@ function contact() {
                   height="90%"
                   fontSize="20px"
                   href="/"
+                  onClick={SendMessage}
                 ></Buttons>
               </div>
             </div>
             <div className="ContactForm">
-              <TextField id="Name" label="Name"></TextField>
-              <TextField id="Email" label="Email"></TextField>
-              <TextField id="Message" rows="16" label="Message"></TextField>
+              <Form width="100%" height="100%">
+                <TextField
+                  color="success"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                  id="Name"
+                  label="Name"
+                  inputProps={{ maxLength: "100" }}
+                ></TextField>
+                <TextField
+                  color="success"
+                  width="100%"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  id="Email"
+                  label="Email"
+                  inputProps={{ maxLength: "100" }}
+                ></TextField>{" "}
+                <TextField
+                  color="success"
+                  width="100%"
+                  value={message}
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                  id="Message"
+                  inputProps={{ maxLength: "1000" }}
+                  label="Message"
+                  multiline
+                  maxRows={18}
+                  minRows={18}
+                  height="100%"
+                ></TextField>
+              </Form>
             </div>
+          </div>
+          <div className="ContactAlerts">
+            <Snackbar
+              open={openSnackbar}
+              autoHideDuration={1700}
+              onClose={handleCloseSnackbar}
+              anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+            >
+              <Alert severity={severity}>{alert}</Alert>
+            </Snackbar>
           </div>
         </div>
       </ThemeProvider>
     </>
   );
-}
+};
 
-export default contact;
+export default Contact;

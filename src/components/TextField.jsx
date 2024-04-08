@@ -1,31 +1,23 @@
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import { TextField } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import Theme from './theme.jsx';
 
-export default function MultilineTextFields(props) {
-  const div2 = {
-    width: "100%",
-  };
+const Input = styled(TextField)(({ theme, ...props }) => ({
+  margin: '10px',
+  backgroundColor: Theme.palette.tertiary,
+  '& .MuiOutlinedInput-root': {
+    fontSize: '14px',
+    '& fieldset': {
+      height: props.height
+    },
+    '&:hover fieldset': {
+      color: Theme.palette.primary,
+    },
+    '&.Mui-focused fieldset': {
+      color: Theme.palette.primary,
+    }
+  }
+}));
 
-  return (
-    <Box
-      component="form"
-      sx={{
-        "& .MuiTextField-root": { m: 1, width: "98%" }
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <div style={div2}>
-        <TextField
-          inputProps={{style: {fontSize: 14}}} 
-          InputLabelProps={{style: {fontSize: 14}}} 
-          id={props.id}
-          label={props.label}
-          multiline
-          color="success"
-          rows={props.rows}
-        />
-      </div>
-    </Box>
-  );
-}
+export default Input;
+
