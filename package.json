@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "homepage": "https://jp121212.github.io/ZapPage/",
+    "homepage": "http://jp121212.github.io/ZapPage",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
