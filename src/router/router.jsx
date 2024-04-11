@@ -19,6 +19,6 @@ export const ERoutes = [
     {
         path: '/about',
         element: <About />
-    }
+    },
 ];
 

@@ -27,7 +27,7 @@ function Buttons(props) {
       href={props.href}
       onClick={props.onClick}
       type={props.type}
-      startIcon={props.startIcon ? props.startIcon : ''}>
+      startIcon={props.startIcon ? props.startIcon : ""}>
       {props.text}
     </Button1>
   );
